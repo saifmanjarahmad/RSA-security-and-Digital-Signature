@@ -8,10 +8,7 @@ import sympy
 #    z = bin(p)
 #    l = len(z) - 2
 
-print("#IDs")
-print("MY_ID = " + str(40217056))
-print("MY_ID = " + str(27717326))
-print("\n")
+
 print("#my data")
 
 p = 36943
