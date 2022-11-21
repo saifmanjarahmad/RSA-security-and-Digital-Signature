@@ -1,6 +1,7 @@
 import sympy
 
 # Got the value of p randomly from the next 5 lines then used it as static
+#The size of p is of 16 bits
 
 # l = 2
 # while l != 16:
@@ -16,6 +17,7 @@ p = 36943
 print("p= " + str(p))
 
 # Got the value of q randomly from the next 5 lines then used it as static
+#The size of q of is 16 bits
 
 # k = 2
 # while k != 16:
@@ -36,6 +38,7 @@ Phi_N = (p - 1) * (q - 1)
 print("phi_N= " + str(Phi_N))
 
 # Got the value of e randomly from the next 2 lines then used it as static
+# The value of e must not be a prime number
 
 # e = sympy.randprime(0, Phi_N - 1)
 # if math.gcd(Phi_N, e) == 1:
