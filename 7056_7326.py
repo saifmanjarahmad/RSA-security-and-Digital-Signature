@@ -116,10 +116,10 @@ for i in range(len(list3)):
     q16 = (q15 ** 2) % partner_N
     q17 = (q16 ** 2) % partner_N
 
-    list3[i] = ((q1 * q17) % partner_N)
-    list4.append(list3[i])
+    list3[i] = ((q1 * q17) % partner_N) #see arithmetic mod
+    list4.append(list3[i]) 
 
-print("MY_CIPHERTEXT = " + str(list4))
+print("MY_CIPHERTEXT = " + str(list4)) #ciphertext with decimal numbers which will be decrypted by the partner
 print('\n')
 # print(list4)
 
@@ -129,7 +129,7 @@ list5 = [703718609, 248577627, 818982822, 554257118, 924702589, 583766315, 10429
          1363015629, 427238170, 1293158509, 965997147, 5803763, 285099495, 490415529, 1552677081, 549457257,
          1018082718, 52241121, 1453114394, 475863239, 112639551, 1413897516, 322272937, 999503322, 820176710,
          370995863, 1740732368, 1095992151, 1685642412, 542235939, 925150304, 1803895222, 967169469, 288373441,
-         990708286, 1069839417, 638000433, 621336951, 1065805647, 778565217, 1069796439]
+         990708286, 1069839417, 638000433, 621336951, 1065805647, 778565217, 1069796439] #partner's ciphertext that I needed to decrypt
 
 list6 = []
 
@@ -162,7 +162,7 @@ for i in range(len(list5)):
     qq26 = (qq25 ** 2) % N
 
     list5[i] = (((((qq1 * qq2 * qq3 * qq6) % N) * ((qq8 * qq11 * qq15 * qq16) % N)) % N) * (
-            (qq19 * qq21 * qq22 * qq23 * qq26) % N)) % N
+            (qq19 * qq21 * qq22 * qq23 * qq26) % N)) % N #see arithmetic mod 
     list6.append(list5[i])
 
 print("PARTNER_CIPHERTEXT = " + str(list6))
