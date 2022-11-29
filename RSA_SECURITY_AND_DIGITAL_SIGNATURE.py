@@ -1,13 +1,13 @@
 import sympy
 
 # Got the value of p randomly from the next 5 lines then used it as static
-#The size of p is of 16 bits
+
 
 # l = 2
 # while l != 16:
-#    p = sympy.randprime(0, 65535)
+#    p = sympy.randprime(0, 65535) #The size of p is of 16 bits
 #    z = bin(p)
-#    l = len(z) - 2
+#    l = len(z) - 2 # substitute first 2 bits because it came with 0x
 
 
 print("#my data")
@@ -23,7 +23,7 @@ print("p= " + str(p))
 # while k != 16:
 #    q = sympy.randprime(0, 65535)
 #    s = bin(q)
-#    k = len(s) - 2
+#    k = len(s) - 2 # substitute first 2 bits because it came with 0x
 
 q = 49307
 
@@ -45,7 +45,7 @@ print("phi_N= " + str(Phi_N))
 
 #  print("Value of e: " + str(e))
 
-e = 1258093567
+e = 1258093567 # prime value
 
 print("e= " + str(e))
 
@@ -55,15 +55,17 @@ print("d= " + str(d))
 
 print("\n")
 print("#my partner data")
-print("PARTNER_N= " + str("14266103"))
-print("PARTNER_e= " + str("65537"))
+print("PARTNER_N= " + str("14266103")) # Partner's public key N
+print("PARTNER_e= " + str("65537")) # Partner's public key e
 print("\n")
+
+#Both N,e are public key so anyone can access them
 
 partner_N = 14266103
 partner_e = 65537
 
 print("# encryption")
-message = "Nothing is permanent"
+message = "Nothing is permanent" #My message
 
 print("MY_MESSAGE = " + message)
 
