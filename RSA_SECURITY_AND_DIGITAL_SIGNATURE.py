@@ -31,7 +31,7 @@ print("q= " + str(q))
 
 N = p * q
 
-print("N= " + str(N))
+print("N= " + str(N)) # My public key N
 
 Phi_N = (p - 1) * (q - 1)
 
@@ -43,13 +43,14 @@ print("phi_N= " + str(Phi_N))
 # e = sympy.randprime(0, Phi_N - 1)
 # if math.gcd(Phi_N, e) == 1:
 
-#  print("Value of e: " + str(e))
+#  print("Value of e: " + str(e)) # My public key e
+                                  # Need to comment out 43 and 44 to get the value of e
 
 e = 1258093567 # prime value
 
 print("e= " + str(e))
 
-d = sympy.mod_inverse(e, Phi_N)
+d = sympy.mod_inverse(e, Phi_N) # d is the modular inverse of e and Phi_N
 
 print("d= " + str(d))
 
@@ -61,8 +62,8 @@ print("\n")
 
 #Both N,e are public key so anyone can access them
 
-partner_N = 14266103
-partner_e = 65537
+partner_N = 14266103 # partner's public key N
+partner_e = 65537    # partner's public key e
 
 print("# encryption")
 message = "Nothing is permanent" #My message
