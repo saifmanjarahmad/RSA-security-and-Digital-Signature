@@ -117,9 +117,9 @@ for i in range(len(list3)):
     q14 = (q13 ** 2) % partner_N
     q15 = (q14 ** 2) % partner_N
     q16 = (q15 ** 2) % partner_N
-    q17 = (q16 ** 2) % partner_N
+    q17 = (q16 ** 2) % partner_N # as the word is 16 bits
 
-    list3[i] = ((q1 * q17) % partner_N) #see arithmetic mod
+    list3[i] = ((q1 * q17) % partner_N) #see arithmetic mod, only first bit and last bit is 1 so I took q1 and q17
     list4.append(list3[i]) 
 
 print("MY_CIPHERTEXT = " + str(list4)) #ciphertext with decimal numbers which will be decrypted by the partner
@@ -173,7 +173,7 @@ print("PARTNER_CIPHERTEXT = " + str(list6))
 list7 = []
 
 for i in range(len(list6)):
-    list6[i] = hex(list6[i])
+    list6[i] = hex(list6[i]) #int to hexa
     list7.append(list6[i])
     list7[i] = list7[i][2:]
 
@@ -182,7 +182,7 @@ for i in range(len(list6)):
 list8 = []
 
 for i in range(len(list7)):
-    list7[i] = bytearray.fromhex(list7[i]).decode("utf-8")
+    list7[i] = bytearray.fromhex(list7[i]).decode("utf-8") # decoded it
     list8.append(list7[i])
 
 print('PARTNER_MESSAGE_chunks_AFTER_DECRYPT =' + str(list8))
@@ -190,7 +190,7 @@ print('PARTNER_MESSAGE_chunks_AFTER_DECRYPT =' + str(list8))
 list9 = []
 
 decoded_message = ''.join(list8)
-print("PARTNER_MESSAGE_AFTER_DECRYPT = " + str(decoded_message))
+print("PARTNER_MESSAGE_AFTER_DECRYPT = " + str(decoded_message)) #joined the decoded message
 
 print("# sign")
 MY_MESSAGE_TO_BE_SIGNED = "Saif Manjar Ahmad"
